@@ -85,8 +85,6 @@
         return;
     }
     
-    SLComposeViewController *composeVc1 = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeSinaWeibo];
-    
     // 2.创建分享的控制器
     SLComposeViewController *composeVc = [SLComposeViewController composeViewControllerForServiceType:test];
     if (composeVc == nil){

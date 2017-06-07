@@ -13,6 +13,7 @@
 #import <AFNetworking.h>
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 
 @end
 
@@ -23,8 +24,11 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    // 分享图片
+//    [CLVedioShareManager indirectShareImage];
 //    [CLVedioShareManager directShareImage];
     
+    // 分享视频
     [self shareVedioWithUrl:@"http://nettuts.s3.amazonaws.com/763_sammyJSIntro/trailer_test.mp4"];
 }
 
@@ -69,6 +73,7 @@
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
     NSURLSessionDownloadTask *task = [manager downloadTaskWithRequest:request progress:^(NSProgress *downloadProgress){
         NSLog(@"%@",downloadProgress);
+        self.progressView.observedProgress = downloadProgress;
     } destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
         return filePathUrl;
     } completionHandler:^(NSURLResponse *response, NSURL *filePathUrl, NSError *error) {

@@ -10,10 +10,10 @@
 
 @interface CLVedioShareManager : NSObject
 
++ (void)indirectShareImage;
++ (void)directShareImage;
 + (void)directShareVedio:(NSURL *)url;
 + (void)indirectShareVedio:(NSURL *)url;
 + (void)shareVedioAsFile:(NSURL *)url;
-+ (void)indirectShareImage;
-+ (void)directShareImage;
 
 @end
