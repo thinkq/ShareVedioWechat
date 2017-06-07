@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69542683F1B1FCA530F6BC06 /* libPods-ShareVedioWechat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5685F552F2AA513F49CF4CA0 /* libPods-ShareVedioWechat.a */; };
 		9CF3807A1ED81E1000ACDEDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF380791ED81E1000ACDEDF /* main.m */; };
 		9CF3807D1ED81E1000ACDEDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3807C1ED81E1000ACDEDF /* AppDelegate.m */; };
 		9CF380801ED81E1000ACDEDF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3807F1ED81E1000ACDEDF /* ViewController.m */; };
@@ -17,9 +18,12 @@
 		9CF650601EE7E9FB000453F0 /* SLComposeViewController+Method.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF6505A1EE7E9FB000453F0 /* SLComposeViewController+Method.m */; };
 		9CF650611EE7E9FB000453F0 /* RuntimeDump.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF6505E1EE7E9FB000453F0 /* RuntimeDump.m */; };
 		9CF650641EE7EA33000453F0 /* CLVedioDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF650631EE7EA33000453F0 /* CLVedioDownloadManager.m */; };
+		9CF650681EE7EAF0000453F0 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF650671EE7EAF0000453F0 /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0291C97CA83BBB959126F01B /* Pods-ShareVedioWechat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareVedioWechat.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareVedioWechat/Pods-ShareVedioWechat.release.xcconfig"; sourceTree = "<group>"; };
+		5685F552F2AA513F49CF4CA0 /* libPods-ShareVedioWechat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShareVedioWechat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF380751ED81E1000ACDEDF /* ShareVedioWechat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareVedioWechat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF380791ED81E1000ACDEDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9CF3807B1ED81E1000ACDEDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,6 +42,9 @@
 		9CF6505E1EE7E9FB000453F0 /* RuntimeDump.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeDump.m; sourceTree = "<group>"; };
 		9CF650621EE7EA33000453F0 /* CLVedioDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLVedioDownloadManager.h; sourceTree = "<group>"; };
 		9CF650631EE7EA33000453F0 /* CLVedioDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLVedioDownloadManager.m; sourceTree = "<group>"; };
+		9CF650661EE7EAF0000453F0 /* ALAssetsLibrary+CustomPhotoAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+CustomPhotoAlbum.h"; sourceTree = "<group>"; };
+		9CF650671EE7EAF0000453F0 /* ALAssetsLibrary+CustomPhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+CustomPhotoAlbum.m"; sourceTree = "<group>"; };
+		D491E861E2794005A460B666 /* Pods-ShareVedioWechat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareVedioWechat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareVedioWechat/Pods-ShareVedioWechat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +52,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69542683F1B1FCA530F6BC06 /* libPods-ShareVedioWechat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B87EC283EE123D4B80142F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5685F552F2AA513F49CF4CA0 /* libPods-ShareVedioWechat.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9CF3806C1ED81E1000ACDEDF = {
 			isa = PBXGroup;
 			children = (
 				9CF380771ED81E1000ACDEDF /* ShareVedioWechat */,
 				9CF380761ED81E1000ACDEDF /* Products */,
+				FA08328E3EAC55568EDF3D35 /* Pods */,
+				4B87EC283EE123D4B80142F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +88,7 @@
 		9CF380771ED81E1000ACDEDF /* ShareVedioWechat */ = {
 			isa = PBXGroup;
 			children = (
+				9CF650651EE7EAF0000453F0 /* ALAssetsLibrary-CustomPhotoAlbum */,
 				9CF650561EE7E9FB000453F0 /* 分享 */,
 				9CF6505B1EE7E9FB000453F0 /* 下载 */,
 				9CF6505C1EE7E9FB000453F0 /* runtime工具 */,
@@ -123,6 +142,25 @@
 			path = "runtime工具";
 			sourceTree = "<group>";
 		};
+		9CF650651EE7EAF0000453F0 /* ALAssetsLibrary-CustomPhotoAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				9CF650661EE7EAF0000453F0 /* ALAssetsLibrary+CustomPhotoAlbum.h */,
+				9CF650671EE7EAF0000453F0 /* ALAssetsLibrary+CustomPhotoAlbum.m */,
+			);
+			name = "ALAssetsLibrary-CustomPhotoAlbum";
+			path = "../ALAssetsLibrary-CustomPhotoAlbum";
+			sourceTree = "<group>";
+		};
+		FA08328E3EAC55568EDF3D35 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D491E861E2794005A460B666 /* Pods-ShareVedioWechat.debug.xcconfig */,
+				0291C97CA83BBB959126F01B /* Pods-ShareVedioWechat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,9 +168,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CF3808C1ED81E1000ACDEDF /* Build configuration list for PBXNativeTarget "ShareVedioWechat" */;
 			buildPhases = (
+				C3E95963519DEB2870BBE29F /* [CP] Check Pods Manifest.lock */,
 				9CF380711ED81E1000ACDEDF /* Sources */,
 				9CF380721ED81E1000ACDEDF /* Frameworks */,
 				9CF380731ED81E1000ACDEDF /* Resources */,
+				D67A12FB84FF0134D1578658 /* [CP] Embed Pods Frameworks */,
+				0AFB6A5F5150A1F2E63C729D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,6 +231,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0AFB6A5F5150A1F2E63C729D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShareVedioWechat/Pods-ShareVedioWechat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3E95963519DEB2870BBE29F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D67A12FB84FF0134D1578658 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShareVedioWechat/Pods-ShareVedioWechat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9CF380711ED81E1000ACDEDF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -202,6 +291,7 @@
 				9CF3807D1ED81E1000ACDEDF /* AppDelegate.m in Sources */,
 				9CF650611EE7E9FB000453F0 /* RuntimeDump.m in Sources */,
 				9CF3807A1ED81E1000ACDEDF /* main.m in Sources */,
+				9CF650681EE7EAF0000453F0 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +411,7 @@
 		};
 		9CF3808D1ED81E1000ACDEDF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D491E861E2794005A460B666 /* Pods-ShareVedioWechat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 753FLT35FZ;
@@ -334,6 +425,7 @@
 		};
 		9CF3808E1ED81E1000ACDEDF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0291C97CA83BBB959126F01B /* Pods-ShareVedioWechat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 753FLT35FZ;

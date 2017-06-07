@@ -10,9 +10,8 @@
 #import <CommonCrypto/CommonDigest.h>
 #import "ALAssetsLibrary+CustomPhotoAlbum.h"
 #import "CLVedioShareManager.h"
-#import "CLKVStore.h"
 
-#define CLShareVedioKey @"CLShareVedioKey"
+#define ShareVedioKey @"ShareVedioKey"
 
 @interface CLVedioDownloadManager()
 
@@ -50,7 +49,7 @@
                                     } else {
                                         NSLog(@"保存视频到相册成功:%@",assetURL);
                                         [CLVedioShareManager directShareVedio:assetURL];
-                                        // ZQTODO 保存到本地 key:fileName value assetURL
+                                        // 保存到本地 key:fileName value assetURL
                                         [CLVedioDownloadManager saveAssetURL:assetURL fileName:fileName];
                                     }
                                 }];
@@ -58,14 +57,18 @@
 
 + (void)saveAssetURL:(NSURL *)assetURL fileName:(NSString *)fileName {
     NSMutableDictionary *vedioDictionary = [NSMutableDictionary dictionary];
-    [vedioDictionary addEntriesFromDictionary:[[CLKVStore sharedInstance] dictionaryForKey:CLShareVedioKey]];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    [vedioDictionary addEntriesFromDictionary:[userDefaults dictionaryForKey:ShareVedioKey]];
     [vedioDictionary setValue:[assetURL absoluteString] forKey:fileName];
     NSDictionary *dictionary = [NSDictionary dictionaryWithDictionary:vedioDictionary];
-    [[CLKVStore sharedInstance] setValue:dictionary forKey:CLShareVedioKey];
+    [userDefaults setValue:dictionary forKey:ShareVedioKey];
+    [userDefaults synchronize];
 }
 
 + (NSString *)getAssetURLforFile:(NSString *)fileName {
-    NSDictionary *dic = [[CLKVStore sharedInstance] dictionaryForKey:CLShareVedioKey];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *dic = [userDefaults dictionaryForKey:ShareVedioKey];
     NSString *assetURL = [dic objectForKey:fileName];
     if (assetURL && assetURL.length > 0) {
         return assetURL;
